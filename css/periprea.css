@@ -423,7 +423,7 @@ section .hover {
     padding: 4vw 0vw;
     position: absolute;
     justify-content: center;
-    line-height: 35px;
+    line-height: 40px;
 }
 
 /* 아이콘 */
@@ -522,12 +522,12 @@ section .hover {
 
 /* 더보기(view all) 아이콘 */
 .view {
-    width: 21%;
+    width: 25%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     margin-top: 5px;
-    margin-left: 75vw;
+    margin-left: 70vw;
 }
 
 .view p {
