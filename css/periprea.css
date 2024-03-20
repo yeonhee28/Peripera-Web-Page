@@ -497,7 +497,7 @@ section .hover {
 
 .s3 .banner2 ul li img {
     width: 70%;
-    margin-bottom: 3vw;
+    /* margin-bottom: 3vw; */
 }
 
 .s3 .banner2 ul li h2 {
