@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>페리페라</title>
+    <!-- fullpage.css -->
+    <link rel="stylesheet" href="css/jquery.fullpage.css" type="text/css">
+    <!-- 사용자정의 css -->
+    <link rel="stylesheet" href="css/periprea.css" type="text/css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/icon">
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="js/jquery-3.7.1.js"></script>
+    <!-- fullpage.js -->
+    <script src="js/jquery.fullpage.js"></script>
+    <!-- 사용자 정의 js -->
+    <script src="js/periprea.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="center_box">
+                <!-- 로고는 모바일 버전과 pc버전이 다르므로 이미지를 배경으로 처리함 -->
+                <div class="logo"><a href="#">로고</a></div>
+                <div class="right_area">
+                    <!--  pc, tablet버전에서는 보임, 모바일에서는 안보임 -->
+                    <div class="menu_icon">
+                        <a href="#"><img src="img/menu_btn.png" alt="메뉴버튼"></a>
+                    </div>
+                    <div class="navi">
+                        <!-- 탑메뉴 : pc버전에서는 보임, tablet, 모바일에서는 안보임 -->
+                        <div class="pc_top_menu">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <span><img src="img/cart.svg" alt="장바구니"></span>
+                                        <p>장바구니</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span><img src="img/alarm.svg" alt="알림"></span>
+                                        <p>알림</p>
+                                    </a>
+                                </li>
+                                <li> <a href="#">
+                                        <span><img src="img/user.svg" alt="로그인"></span>
+                                        <p>로그인</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 네비게이션 영역 -->
+                        <div class="menu">
+
+                            <div class="menu_in">
+                                <!-- 검색, 다국어지원 : pc에서는 보이고, tablet과 모바일에선 안보임 -->
+                                <div class="search_lang">
+                                    <div class="search">
+                                        <input type="text" id="search">
+                                        <a href="#">
+                                            <svg class="search_icon" fill="none" height="24" stroke="currentColor"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="11" cy="11" r="8" />
+                                                <line x1="21" x2="16.65" y1="21" y2="16.65" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="language">
+                                        <select name="" id="lang">
+                                            <option value="kor">KOR</option>
+                                            <option value="eng">ENG</option>
+                                            <option value="jpn">JPN</option>
+                                            <option value="cn">CN</option>
+                                        </select>
+                                    </div>
+                                </div><!--search_lang-->
+                                <!-- 탑메뉴 :  tablet, pc버전에서는 보이고, 모바일에서는 안보임 -->
+                                <div class="mo_top_menu">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <span>
+                                                    <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect fill="none" height="256" width="256" />
+                                                        <path class="cart_icon"
+                                                            d="M184,184H69.8L41.9,30.6A8,8,0,0,0,34.1,24H16" fill="none"
+                                                            stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="12" />
+                                                        <circle class="cart_icon" cx="80" cy="204" fill="none" r="20"
+                                                            stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="12" />
+                                                        <circle class="cart_icon" cx="184" cy="204" fill="none" r="20"
+                                                            stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="12" />
+                                                        <path class="cart_icon"
+                                                            d="M62.5,144H188.1a15.9,15.9,0,0,0,15.7-13.1L216,64H48"
+                                                            fill="none" stroke="#000" stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-width="12" />
+                                                    </svg>
+                                                </span>
+                                                <p>장바구니</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span>
+                                                    <svg id="Layer_1" class="alarm_icon"
+                                                        style="enable-background:new 0 0 48 48;" version="1.1"
+                                                        viewBox="0 0 48 48" xml:space="preserve"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <path
+                                                            d="M39,36c-0.2-1.3-0.6-2.5-1-3.6c-0.5-1.2-0.9-2.4-1-3.7c-0.1-1.2-0.1-2.4-0.1-3.6c0-1.3,0-2.7-0.1-4c-0.4-3.9-2-7-4.5-9.2  c-1.2-1-2.7-1.8-4.2-2.3C27.7,7.5,26.1,6,24,6c-2,0-3.7,1.5-3.9,3.4c-1.5,0.5-3,1.3-4.2,2.3c-2.6,2.2-4.1,5.3-4.5,9.2  c-0.1,1.4-0.1,2.7-0.1,4c0,1.3,0,2.4-0.1,3.6c-0.1,1.3-0.6,2.5-1,3.7c-0.4,1.1-0.9,2.3-1,3.6c-0.1,0.5,0.1,0.9,0.3,1.3  c0.3,0.3,0.7,0.5,1.2,0.5h8.5c0.4,2.4,2.4,4.2,4.9,4.2c2.5,0,4.5-1.9,4.9-4.2h8.5c0.5,0,0.9-0.2,1.2-0.5C38.9,36.9,39.1,36.4,39,36z   M24,8c0.7,0,1.4,0.4,1.7,0.9c-0.6-0.1-1.1-0.1-1.7-0.1c-0.6,0-1.1,0.1-1.7,0.1C22.7,8.4,23.3,8,24,8z M24,40c-1.4,0-2.6-1-2.9-2.2  h5.8C26.5,39,25.4,40,24,40z M11.1,35.8c0.2-0.9,0.5-1.8,0.9-2.7c0.5-1.3,1-2.7,1.1-4.2c0.1-1.3,0.1-2.6,0.1-3.8  c0-1.3,0-2.6,0.1-3.8c0.3-3.3,1.7-6.1,3.8-7.9c1.9-1.6,4.3-2.5,6.9-2.5c2.6,0,5,0.9,6.9,2.5c2.2,1.8,3.5,4.5,3.8,7.9  c0.1,1.3,0.1,2.5,0.1,3.8c0,1.2,0,2.5,0.1,3.8c0.1,1.5,0.6,2.9,1.1,4.2c0.3,0.9,0.7,1.8,0.9,2.7H11.1z" />
+                                                    </svg>
+                                                </span>
+                                                <p>알림</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span>
+                                                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+                                                        class="user_icon">
+                                                        <title />
+                                                        <g id="about">
+                                                            <path
+                                                                d="M16,16A7,7,0,1,0,9,9,7,7,0,0,0,16,16ZM16,4a5,5,0,1,1-5,5A5,5,0,0,1,16,4Z" />
+                                                            <path
+                                                                d="M17,18H15A11,11,0,0,0,4,29a1,1,0,0,0,1,1H27a1,1,0,0,0,1-1A11,11,0,0,0,17,18ZM6.06,28A9,9,0,0,1,15,20h2a9,9,0,0,1,8.94,8Z" />
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <p>로그인</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- 닫기 버튼 : pc에서는 안 보이고 , tablet과 모바일에서는 보임 -->
+                                <div class="close">
+                                    <a href="#">
+                                        <svg class="close_icon" height="512" viewBox="0 0 512 512" width="512"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <title />
+                                            <path
+                                                d="M289.94,256l95-95A24,24,0,0,0,351,127l-95,95-95-95A24,24,0,0,0,127,161l95,95-95,95A24,24,0,1,0,161,385l95-95,95,95A24,24,0,0,0,385,351Z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div><!-- menu_in -->
+
+                            <!-- 글로벌 네비게이션(2차원메뉴) -->
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <p>메이크업</p>
+                                            <div class="plus_icon">
+                                                <span class="row_line"></span>
+                                                <span class="col_line"></span>
+                                            </div>
+                                        </a>
+                                        <ul class="sub">
+                                            <li><a href="#">베이스</a></li>
+                                            <li><a href="#">립</a></li>
+                                            <li><a href="#">아이</a></li>
+                                            <li><a href="#">치크/컨투어링</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p>소품/홈프래그런스</p>
+                                            <div class="plus_icon">
+                                                <span class="row_line"></span>
+                                                <span class="col_line"></span>
+                                            </div>
+                                        </a>
+                                        <ul class="sub">
+                                            <li><a href="#">미용소품</a></li>
+                                            <li><a href="#">잡화</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p>스킨케어</p>
+                                            <div class="plus_icon">
+                                                <span class="row_line"></span>
+                                                <span class="col_line"></span>
+                                            </div>
+                                        </a>
+                                        <ul class="sub">
+                                            <li><a href="#">클렌징</a></li>
+                                            <li><a href="#">선케어</a></li>
+                                            <li><a href="#">패드/마스크</a></li>
+                                            <li><a href="#">토너/미스트</a></li>
+                                            <li><a href="#">로션/크림</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p>이벤트</p>
+                                            <div class="plus_icon">
+                                                <span class="row_line"></span>
+                                                <span class="col_line"></span>
+                                            </div>
+                                        </a>
+                                        <ul class="sub">
+                                            <li><a href="#">이벤트</a></li>
+                                            <li><a href="#">뷰티테스터</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <p>고객센터</p>
+                                            <div class="plus_icon">
+                                                <span class="row_line"></span>
+                                                <span class="col_line"></span>
+                                            </div>
+                                        </a>
+                                        <ul class="sub">
+                                            <li><a href="#">공지사항</a></li>
+                                            <li><a href="#">자주 묻는 질문</a></li>
+                                            <li><a href="#">1:1 문의</a></li>
+                                            <li><a href="#">회원 혜택</a></li>
+                                            <li><a href="#">Idea Box</a></li>
+                                            <li><a href="#">단종 상품 찾기</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div> <!-- menu-->
+                    </div>
+                    <!-- div 내비게이션 서브 메뉴 배경 -->
+                    <div class="sub_bg"></div>
+                </div>
+            </div>
+        </header>
+        <section class="section s1">
+            <!-- 아이콘 4개-->
+            <div class="movie">
+                <!-- 1
+                    <video autoplay muted loop>
+                    <source src="video/peripera.mp4" type="video/mp4">
+                </video>!
+                2-->
+                <iframe width="100%" height="100%"
+                    src="https://www.youtube.com/embed/pmC-dWR1OAE?si=z6pvqnYbO_u1DuxS;controls=0&rel=0&vq=hd1080&autoplay=1&mute=1&loop=1&playlist=pmC-dWR1OAE"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="main_icon">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i><img src="img/ico_banner_5.png" alt="페리페라 소개"></i>
+                            <p>periprea</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i><img src="img/ico_banner_4.png" alt="신상 컬렉션 소개"></i>
+                            <p>new</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i><img src="img/ico_banner_8.png" alt="베스트 제품 소개"></i>
+                            <p>best</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i><img src="img/ico_banner_6.png" alt="리뷰 보기"></i>
+                            <p>review</p>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </section>
+        <section class="section s2">
+            <div class="center_box">
+                <h1>NEW</h1>
+                <p>핑잘알 페이페라의 NEW 컬렉션을 소개합니다.</p>
+                <div class="view">
+                    <p>View all</p>
+                    <a href="#">
+                        <img src="img/ico_arrow_right.png" alt="">
+                    </a>
+                </div>
+                <div class="banner1">
+                    <ul>
+                        <!-- 사진은 배경으로, pc버전의 마우스 오버효과와 아이콘과 글자는 겹침 -->
+                        <li>
+                            <a href="#">
+                                <!-- 마우스, 오버하면 나타나는 영역(pc에서는 보임, 모바일에서는 안보임) -->
+                                <div class="hover">
+                                </div>
+                                <!-- 아이콘, 글씨 -->
+                                <div class="icon_txt t1">
+                                    <div class="icon_bg">
+                                        <img src="img/c1.png" alt="페리복권 컬렉션 보러가기">
+                                    </div>
+                                    <div class="txt">
+                                        <h2>페리복권 컬렉션</h2>
+                                        <hr>
+                                        <p>청초의 끝이 없네 ~ 청초당첨!<br> #컬러명당 #페리복권 #Lucky-Lottery</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <!-- 마우스, 오버하면 나타나는 영역(pc에서는 보임, 모바일에서는 안보임) -->
+                                <div class="hover">
+                                </div>
+                                <!-- 아이콘, 글씨 -->
+                                <div class="icon_txt t2">
+                                    <div class="icon_bg">
+                                        <img src="img/c2.png" alt="나잇페리 프렌즈 컬렉션 보러가기">
+                                    </div>
+                                    <div class="txt">
+                                        <h2>나잇페리 프렌즈 컬렉션</h2>
+                                        <hr>
+                                        <p>걱정이나 두려움은 페리에게 맡겨!<br>페리페라 나잇 페리 프렌즈 컬렉션</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <!-- 마우스, 오버하면 나타나는 영역(pc에서는 보임, 모바일에서는 안보임) -->
+                                <div class="hover">
+                                </div>
+                                <!-- 아이콘, 글씨 -->
+                                <div class="icon_txt t3">
+                                    <div class="icon_bg">
+                                        <img src="img/c3.png" alt="오버블러 컬렉션 보러가기">
+                                    </div>
+                                    <div class="txt">
+                                        <h2>오버블러 컬렉션</h2>
+                                        <hr>
+                                        <p>#생기확장 #블러보정<br>#갓생블러 #오버립 치트키</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="section s3">
+            <h1>BEST</h1>
+            <p>핑잘알 페이페라의 BEST을 소개합니다.</p>
+            <div class="view">
+                <p>View all</p>
+                <a href="#">
+                    <img src="img/ico_arrow_right.png" alt="">
+                </a>
+            </div>
+            <div class="banner2">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="img/lipgloss.jpg" alt="잉크 글래스팅 립글로스">
+                            <h2>잉크 글래스팅 립글로스</h2>
+                            <hr>
+                            <p>Ink Glasting Lip Gloss</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/new1_cheek.jpg" alt="잉크 무드 클로이 밤">
+                            <h2>잉크 무드 클로이 밤</h2>
+                            <hr>
+                            <p>Pure Blushed Custom Cheek</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/new4_moodplt.png" alt="올테이크 무드 라이크 팔레트">
+                            <h2>올테이크 무드 팔레트</h2>
+                            <hr>
+                            <p>All Take Mood Like Palette</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/new2.png" alt="잉크 무드 글로이 밤">
+                            <h2>잉크 무드 글로이 밤</h2>
+                            <hr>
+                            <p>Ink Mood Glowy Balm</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="section s4">
+            <h1>Review</h1>
+            <p>페리페라 제품의 베스트 리뷰를 <br> 한 눈에 볼 수 있습니다.</p>
+            <div class="view">
+                <p>View all</p>
+                <a href="#">
+                    <img src="img/ico_arrow_right.png" alt="">
+                </a>
+            </div>
+            <div class="banner3">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <div class="photo">
+                                <img src="img/r1.jpg" alt="review1">
+                            </div>
+                            <span class="review">일단 팁이 커서 좋아요 한번 바르고 도포하는데 너무너무너무 편합니다 색도 너무 예뻐서 단독으로 바르기도 좋고 다른 립 위에
+                                포인트 주기도 넘 예뻐요 광이
+                                오래가고 촉촉해서 각질부각도 안 되고 너무 예쁜광이 계속 돕니다 탕후루립 원하시면 다른거 말고 꼭 이거 사세요
+                            </span>
+                            <p>ck16****</P>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="photo">
+                                <img src="img/r2.jpg" alt="review2">
+                            </div>
+                            <span class="review">립스틱같는 밤은 뻑뻑하게 발린다는 편견이 았는데 오늘 처음 발라보고 너무 부드럽게 발려서 놀랐어요
+                                저 웜톤인데도 너무 예뻐서 이거 바르고 싶을 땐 쿨톤 메이크업 하고 다니랴고요
+                            </span>
+                            <p>ck16****</P>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="photo">
+                                <img src="img/r3.jpg" alt="review3">
+                            </div>
+                            <span class="review">립스틱같는 밤은 뻑뻑하게 발린다는 편견이 았는데 오늘 처음 발라보고 너무 부드럽게 발려서 놀랐어요
+                                저 웜톤인데도 너무 예뻐서 이거 바르고 싶을 땐 쿨톤 메이크업 하고 다니랴고요
+                            </span>
+                            <p>ck16****</P>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="photo">
+                                <img src="img/r4.jpg" alt="review4">
+                            </div>
+                            <span class="review">립스틱같는 밤은 뻑뻑하게 발린다는 편견이 았는데 오늘 처음 발라보고 너무 부드럽게 발려서 놀랐어요
+                                저 웜톤인데도 너무 예뻐서 이거 바르고 싶을 땐 쿨톤 메이크업 하고 다니랴고요
+                            </span>
+                            <p>ck16****</P>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="photo">
+                                <img src="img/r5.jpg" alt="review5">
+                            </div>
+                            <span class="review">립스틱같는 밤은 뻑뻑하게 발린다는 편견이 았는데 오늘 처음 발라보고 너무 부드럽게 발려서 놀랐어요
+                                저 웜톤인데도 너무 예뻐서 이거 바르고 싶을 땐 쿨톤 메이크업 하고 다니랴고요
+                            </span>
+                            <p>ck16****</P>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="photo">
+                                <img src="img/r6.jpg" alt="review1">
+                            </div>
+                            <span class="review">립스틱같는 밤은 뻑뻑하게 발린다는 편견이 았는데 오늘 처음 발라보고 너무 부드럽게 발려서 놀랐어요
+                                저 웜톤인데도 너무 예뻐서 이거 바르고 싶을 땐 쿨톤 메이크업 하고 다니랴고요
+                            </span>
+                            <p>ck16****</P>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="section s5">
+            <h1>Peripera</h1>
+            <p>Gen Z의 감성을 위트있게 표현하는 패스트 뷰티 브랜드 <br> 딱 내 감성에 맞는 포인트를 더해 일상을 <br> 특별하게 보정시켜주는 메이크업 브랜드입니다. </p>
+            <div class="banner4">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <div class="hover s5_hover1"></div>
+                            <div class="txt">
+                                <h2>오버블러 틴트</h2>
+                                <hr>
+                                <p>갓생 블러감의 입술 <br>
+                                    영역 확장 연출 오버립 치트키</p>
+                            </div>
+                            <div class="small_deco s5_deco1"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="hover s5_hover2"></div>
+                            <div class="txt">
+                                <h2>하트 잼 글로우 립</h2>
+                                <hr>
+                                <p>클릭 타입으로 편하게 사용하는 <br>
+                                    데일리 글로우 립</p>
+                            </div>
+                            <div class="small_deco s5_deco2"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="hover s5_hover3"></div>
+                            <div class="txt">
+                                <h2>올테이크 무드 라이크 팔레트</h2>
+                                <hr>
+                                <p>섀도우, 블러셔, 하이라이터가 <br>
+                                    팔라트 하나에 쏘-옥!</p>
+                            </div>
+                            <div class="small_deco s5_deco3"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="hover s5_hover4"></div>
+                            <div class="txt">
+                                <h2>잉크 무드 글로이 틴트</h2>
+                                <hr>
+                                <p>웜쿨점지- 퍼스널 당첨! <br>
+                                    맞춤퍼컬로 복덩이 광채립 연출</p>
+                            </div>
+                            <div class="small_deco s5_deco4"></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- auto-height 자동으로 높이 조절 -->
+        <footer class="section auto-height">
+            <div class="footer_logo">
+                <img src="img/logo_peripera.png" alt="로고">
+            </div>
+            <div class="info">
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">웹 사이트 이용약관</a></li>
+                    <li><a href="#">이메일 무단 수집거부</a></li>
+                </ul>
+            </div>
+            <address>
+                법인명 : (주) 클리오 &nbsp; 사업자등록번호 : 211-86-22189 &nbsp; <br>
+                대표 : 한현옥 고객센터 : 080-080-1510 &nbsp;<br>
+                평일: 10시 ~ 17시 주말/공휴일 <br>
+                본사 : 서울 성동구 왕십리로 66 (성수동1가)
+            </address>
+            <p>COPYRIGHT ⓒ 2022 CLUBCLIO.co.ltd. ALL RIGHTS RESERVED.</p>
+            <div class="sns_family">
+                <div class="sns">
+                    <ul>
+                        <li><a href="#"><img src="img/youtube.png" alt="유튜브"></a></li>
+                        <li><a href="#"><img src="img/facecbook.png" alt="페이스북"></a></li>
+                        <li><a href="#"><img src="img/insta.png" alt="인스타"></a></li>
+                        <li><a href="#"><img src="img/twitter.png" alt="x 트위터"></a></li>
+                    </ul>
+                </div>
+                <div class="family">
+                    <div class="family_title">
+                        <a href="#">관련 사이트<span>
+                                <!-- <i>
+                                <img src="img/alarm.svg" alt="관련사이트">
+                            </i> -->
+                            </span></a>
+                    </div>
+                    <div class="family_list">
+                        <a href="#">구달</a>
+                        <a href="#">더마토리</a>
+                        <a href="#">클리오</a>
+                        <a href="#">힐링버드</a>
+                        <a href="#">타입넘버</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
