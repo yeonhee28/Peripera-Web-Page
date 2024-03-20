@@ -13,6 +13,7 @@
 html,
 body {
     font-family: 'Noto Sans KR', sans-serif;
+    overflow-x: hidden;
 }
 
 li {
@@ -294,7 +295,7 @@ section {
 
 /* 모바일 버전의 첫번째 섹션의 높이 조절 */
 section.s1 {
-    height: 90vh;
+    height: 80vh;
 }
 
 
@@ -318,7 +319,7 @@ section .main_icon ul {
 }
 
 section .main_icon ul li {
-    width: 47%;
+    width: 46%;
     margin-top: 32px;
 }
 
@@ -327,7 +328,7 @@ section .main_icon ul li a i {
     border-radius: 50%;
     border: 2px solid #fff;
     display: block;
-    padding: 32px;
+    padding: 22px;
     /* background-color: #FFF; */
 }
 
@@ -356,7 +357,7 @@ section h1 {
 
 section h2 {
     font-size: 1.1rem;
-    margin-bottom: 2vw;
+    margin-bottom: 0vw;
 }
 
 section hr {
@@ -376,7 +377,7 @@ section .hover {
 }
 
 .s2 {
-    height: 75vh;
+    height: 65vh;
     background-color: #FFF0F5;
 }
 
@@ -403,16 +404,16 @@ section .hover {
 }
 
 .s2 .banner1 ul li:first-child {
-    background-image: url(../img/b1.jpg);
+    background-image: url(../img/slide3.jpg);
 }
 
 .s2 .banner1 ul li:nth-child(2) {
-    background-image: url(../img/b2.jpg);
+    background-image: url(../img/slide6.jpg);
 }
 
 
 .s2 .banner1 ul li:last-child {
-    background-image: url(../img/b3.jpg);
+    background-image: url(../img/banner7.jpg);
 }
 
 .s2 .banner1 ul li .icon_txt {
@@ -422,6 +423,7 @@ section .hover {
     padding: 4vw 0vw;
     position: absolute;
     justify-content: center;
+    line-height: 35px;
 }
 
 /* 아이콘 */
@@ -434,12 +436,6 @@ section .hover {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.s2 .banner1 ul li .t1,
-.s2 .banner1 ul li .t2,
-.s2 .banner1 ul li .t3 {
-    display: none;
 }
 
 .s2 .banner1 ul li:first-child .icon_txt .icon_bg {
@@ -1039,13 +1035,6 @@ footer .sns_family .family .family_list a {
         /* padding: 5vw 0; */
     }
 
-
-    .s2 .banner1 ul li .t1,
-    .s2 .banner1 ul li .t2,
-    .s2 .banner1 ul li .t3 {
-        display: block;
-    }
-
     .s2 .banner1 ul li .icon_txt {
         display: flex;
         width: 90%;
@@ -1079,7 +1068,6 @@ footer .sns_family .family .family_list a {
     .s2 .banner1 ul li .icon_txt .txt p {
         font-size: 1rem;
     }
-
 
 
     .s2 .banner1 ul li:first-child {
@@ -1169,8 +1157,6 @@ footer .sns_family .family .family_list a {
         width: 35%;
     }
 
-
-
 }
 
 
@@ -1184,7 +1170,7 @@ footer .sns_family .family .family_list a {
 /* pc 버전(1400px 이상) */
 @media screen and (min-width:1400px) {
     header {
-        height: 130px;
+        height: 120px;
     }
 
     header .center_box {
@@ -1207,7 +1193,9 @@ footer .sns_family .family .family_list a {
     }
 
     header .right_area {
-        width: 72%;
+        width: 77%;
+        flex-flow: column nowrap;
+        align-items: normal;
     }
 
     header .right_area .navi {
@@ -1218,15 +1206,18 @@ footer .sns_family .family .family_list a {
 
     header .menu_icon {
         display: none;
+        order: 1;
     }
 
     header .pc_top_menu {
+        order: 1;
         display: block;
-        width: 14vw;
+        /* width: 14vw; */
     }
 
     header .pc_top_menu ul,
     header .pc_top_menu ul li a {
+        width: 100%;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
@@ -1246,14 +1237,16 @@ footer .sns_family .family .family_list a {
     }
 
     header .menu {
+        order: 2;
         position: relative;
         right: 0;
         padding: 0;
         height: 40px;
-        margin-top: 20px;
+        margin-top: 30px;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
+        align-items: center;
 
         /* (모바일에서의) 배경색 없애기 */
         background-color: transparent;
@@ -1277,6 +1270,7 @@ footer .sns_family .family .family_list a {
 
     header .menu .menu_in .search_lang {
         width: 16vw;
+        margin-bottom: 15px;
     }
 
     header .menu .menu_in .search_lang .search {
@@ -1293,6 +1287,11 @@ footer .sns_family .family .family_list a {
     header .menu .menu_in .search_lang .search input:focus {
         border-radius: 4px;
         outline: 1px solid #ddd;
+    }
+
+    header .menu .menu_in .search_lang .search a {
+        width: 28px;
+        height: 28px;
     }
 
     header .menu .menu_in .search_lang .search a .search_icon {
@@ -1313,6 +1312,7 @@ footer .sns_family .family .family_list a {
 
 
     header .menu .menu_in .language select {
+        font-size: 0.8rem;
         color: #212121;
         outline: none;
     }
@@ -1468,12 +1468,17 @@ footer .sns_family .family .family_list a {
     }
 
 
-    .s2 .banner1 ul li .t1,
-    .s2 .banner1 ul li .t2,
-    .s2 .banner1 ul li .t3 {
-        display: block;
+    .s2 .banner1 ul {
+        flex-flow: row wrap;
+        /* padding: 0 8vw; */
+        margin: 0 5vw;
     }
 
+    .s2 .banner1 ul li {
+        width: 33.3%;
+        height: 800px;
+        /* padding: 5vw 0; */
+    }
 
     .s5 .banner4 ul li .txt {
         background-color: transparent;
