@@ -362,6 +362,7 @@ section h2 {
 
 section hr {
     display: none;
+    margin-top: 1vw;
     margin-bottom: 2vw;
 }
 
@@ -500,7 +501,7 @@ section .hover {
 }
 
 .s3 .banner2 ul li h2 {
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .s3 .banner2 ul li a {
@@ -515,6 +516,7 @@ section .hover {
 
 .s3 .banner2 ul li p {
     margin: 0;
+    font-weight: 0.7rem;
     text-align: center;
     font-weight: bold;
 }
@@ -527,7 +529,7 @@ section .hover {
     flex-flow: row nowrap;
     justify-content: space-between;
     margin-top: 5px;
-    margin-left: 70vw;
+    margin-left: 65vw;
 }
 
 .view p {
@@ -1404,7 +1406,7 @@ footer .sns_family .family .family_list a {
         /* mav 보다는 아래, section 보다는 위에 배치*/
         z-index: 51;
         background-color: #fff;
-        top: 130px;
+        top: 120px;
         left: 0;
         border-top: 1px solid #ddd;
         display: none;
